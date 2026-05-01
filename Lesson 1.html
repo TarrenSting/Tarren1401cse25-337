@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson 1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+// Mark lesson as started (50%)
+localStorage.setItem("lesson1Progress", "50");
+</script>
+
+<div class="container">
+
+    <h1>HTML Basics</h1>
+
+    <div class="lesson-container">
+
+        <!-- INTRO CARD -->
+        <div class="lesson-card">
+            <p>
+                <b>HTML (HyperText Markup Language)</b> is the standard language used to create web pages.
+                It defines the structure of a webpage using elements called tags.
+            </p>
+        </div>
+
+        <!-- STRUCTURE CARD -->
+        <div class="lesson-card">
+            <h3>Basic Structure of HTML</h3>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </div>
+
+        <!-- TAGS CARD -->
+        <div class="lesson-card">
+            <h3>Common HTML Tags</h3>
+            <ul>
+                <li><b>&lt;h1&gt; - &lt;h6&gt;</b>: Headings</li>
+                <li><b>&lt;p&gt;</b>: Paragraph</li>
+                <li><b>&lt;a&gt;</b>: Links</li>
+                <li><b>&lt;img&gt;</b>: Images</li>
+            </ul>
+        </div>
+
+        <!-- EXAMPLE CARD -->
+        <div class="lesson-card">
+            <h3>Example</h3>
+            <pre>
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;a href="https://example.com"&gt;Visit Site&lt;/a&gt;
+            </pre>
+        </div>
+
+        <!-- SUMMARY CARD -->
+        <div class="lesson-card">
+            <p>
+                HTML is the foundation of all websites. It works together with CSS and JavaScript.
+            </p>
+
+            <a href="quiz.html">
+                <button>Take Quiz</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
