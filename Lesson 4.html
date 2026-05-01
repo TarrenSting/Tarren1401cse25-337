@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+// LOCK CHECK (correct system)
+if (localStorage.getItem("lesson3") !== "done") {
+    alert("Complete Lesson 3 first!");
+    window.location.href = "topics.html";
+}
+
+// mark lesson as started
+localStorage.setItem("lesson4Progress", "50");
+</script>
+
+<div class="container">
+
+    <h1>Lesson 4: Project - Build a Website</h1>
+
+    <div class="lesson-container">
+
+        <!-- INTRO -->
+        <div class="lesson-card">
+            <p>
+                Now that you've learned HTML, CSS, and JavaScript basics,
+                it's time to combine everything and build a complete website project.
+            </p>
+        </div>
+
+        <!-- REQUIREMENTS -->
+        <div class="lesson-card">
+            <h3>Project Requirements</h3>
+            <ul>
+                <li>Use HTML to create the structure</li>
+                <li>Use CSS to style your website</li>
+                <li>Use JavaScript to add interactivity</li>
+            </ul>
+        </div>
+
+        <!-- STRUCTURE -->
+        <div class="lesson-card">
+            <h3>Example Project Structure</h3>
+            <pre>
+my-website/
+├── index.html
+├── style.css
+└── script.js
+            </pre>
+        </div>
+
+        <!-- GUIDANCE -->
+        <div class="lesson-card">
+            <p>
+                Be creative — add your own ideas, designs, and features.
+                This is your chance to build something real.
+            </p>
+        </div>
+
+        <!-- ACTION -->
+        <div class="lesson-card">
+            <a href="quiz4.html">
+                <button>Take Quiz</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
