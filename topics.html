@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Topics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="topics" onload="loadProgress()">
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Topics</h2>
+
+    <div class="card-container">
+
+        <!-- LESSON 1 -->
+        <div class="card">
+            <h3>HTML Basics</h3>
+            <p>Learn the structure of web pages</p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress1"></div>
+            </div>
+            <p class="progress-text" id="progressText1">0%</p>
+
+            <button onclick="location.href='lesson 1.html'">Start Lesson</button>
+        </div>
+
+        <!-- LESSON 2 -->
+        <div class="card" id="lesson2Card">
+            <h3>CSS Basics</h3>
+            <p>Learn how to style websites</p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress2"></div>
+            </div>
+            <p class="progress-text" id="progressText2">Locked 🔒</p>
+
+            <button disabled id="lesson2Btn" onclick="location.href='lesson 2.html'">Locked 🔒</button>
+        </div>
+
+        <!-- LESSON 3 -->
+        <div class="card" id="lesson3Card">
+            <h3>JavaScript Basics</h3>
+            <p>Learn how to make websites interactive</p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress3"></div>
+            </div>
+            <p class="progress-text" id="progressText3">Locked 🔒</p>
+
+            <button disabled id="lesson3Btn" onclick="location.href='lesson 3.html'">Locked 🔒</button>
+        </div>
+
+        <!-- LESSON 4 -->
+        <div class="card" id="lesson4Card">
+            <h3>Project: Build a Website</h3>
+            <p>Apply your skills to create a website</p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress4"></div>
+            </div>
+            <p class="progress-text" id="progressText4">Locked 🔒</p>
+
+            <button disabled id="lesson4Btn" onclick="location.href='lesson 4.html'">Locked 🔒</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
