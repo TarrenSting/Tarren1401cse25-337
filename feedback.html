@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>We Value Your Feedback</h2>
+
+    <div class="lesson-container">
+
+        <!-- INFO CARD -->
+        <div class="lesson-card">
+            <p>
+                Help improve this learning platform. Your feedback helps improve lessons,
+                quizzes, and overall experience.
+            </p>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="lesson-card">
+
+            <form id="feedbackForm">
+
+                <label><b>Name</b></label><br>
+                <input type="text" id="name" placeholder="Enter your name" required style="width:100%; padding:10px;"><br><br>
+
+                <label><b>Email</b></label><br>
+                <input type="email" id="email" placeholder="Enter your email" required style="width:100%; padding:10px;"><br><br>
+
+                <label><b>What did you enjoy most?</b></label><br>
+                <textarea id="enjoyed" placeholder="Quizzes, lessons, projects..." style="width:100%; padding:10px; height:80px;"></textarea><br><br>
+
+                <label><b>What was difficult?</b></label><br>
+                <textarea id="difficult" placeholder="Confusing parts..." style="width:100%; padding:10px; height:80px;"></textarea><br><br>
+
+                <label><b>What should we improve or add?</b></label><br>
+                <textarea id="improve" placeholder="More projects, animations, etc..." style="width:100%; padding:10px; height:80px;"></textarea><br><br>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+
+            </form>
+
+            <p id="feedbackMsg" style="margin-top:15px; color:green;"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+// store feedback locally (simple system)
+document.getElementById("feedbackForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const feedback = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        enjoyed: document.getElementById("enjoyed").value,
+        difficult: document.getElementById("difficult").value,
+        improve: document.getElementById("improve").value,
+        date: new Date().toISOString()
+    };
+
+    let allFeedback = JSON.parse(localStorage.getItem("feedbackList")) || [];
+    allFeedback.push(feedback);
+    localStorage.setItem("feedbackList", JSON.stringify(allFeedback));
+
+    document.getElementById("feedbackMsg").innerText =
+        "Thank you! Your feedback has been recorded 🎉";
+
+    document.getElementById("feedbackForm").reset();
+});
+</script>
+
+</body>
+</html>
