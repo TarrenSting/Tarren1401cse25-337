@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+// LOCK CHECK
+if (localStorage.getItem("lesson2") !== "done") {
+    alert("Complete Lesson 2 first!");
+    window.location.href = "topics.html";
+}
+</script>
+
+<div class="container">
+
+    <h1>JavaScript Basics Quiz</h1>
+
+    <div class="quiz-container">
+
+        <!-- Q1 -->
+        <div class="quiz-card">
+            <h3>1. What is JavaScript used for?</h3>
+            <label><input type="radio" name="q1" value="b"> Styling websites</label>
+            <label><input type="radio" name="q1" value="a"> Making websites interactive</label>
+            <label><input type="radio" name="q1" value="c"> Storing images</label>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-card">
+            <h3>2. JavaScript is a ___ language.</h3>
+            <label><input type="radio" name="q2" value="a"> Markup</label>
+            <label><input type="radio" name="q2" value="b"> Programming</label>
+            <label><input type="radio" name="q2" value="c"> Styling</label>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-card">
+            <h3>3. Which language makes web pages interactive?</h3>
+            <label><input type="radio" name="q3" value="a"> HTML</label>
+            <label><input type="radio" name="q3" value="b"> CSS</label>
+            <label><input type="radio" name="q3" value="c"> JavaScript</label>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-card">
+            <h3>4. What does JavaScript NOT do?</h3>
+            <label><input type="radio" name="q4" value="a"> Handle user interaction</label>
+            <label><input type="radio" name="q4" value="b"> Style text colors</label>
+            <label><input type="radio" name="q4" value="c"> Manipulate HTML</label>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz-card">
+            <h3>5. JavaScript can manipulate ___ and CSS.</h3>
+            <label><input type="radio" name="q5" value="a"> Images</label>
+            <label><input type="radio" name="q5" value="b"> HTML</label>
+            <label><input type="radio" name="q5" value="c"> Files</label>
+        </div>
+
+        <!-- Q6 -->
+        <div class="quiz-card">
+            <h3>6. JavaScript is used to communicate with ___.</h3>
+            <label><input type="radio" name="q6" value="a"> Servers</label>
+            <label><input type="radio" name="q6" value="b"> Printers</label>
+            <label><input type="radio" name="q6" value="c"> Screens</label>
+        </div>
+
+        <!-- Q7 -->
+        <div class="quiz-card">
+            <h3>7. Which is an example of JavaScript function?</h3>
+            <label><input type="radio" name="q7" value="a">&lt;p&gt;Hello&lt;/p&gt;</label>
+            <label><input type="radio" name="q7" value="b">function greetUser() { alert("Hello"); }</label>
+            <label><input type="radio" name="q7" value="c">color: red;</label>
+        </div>
+
+        <!-- Q8 -->
+        <div class="quiz-card">
+            <h3>8. JavaScript makes websites ___.</h3>
+            <label><input type="radio" name="q8" value="a"> Static</label>
+            <label><input type="radio" name="q8" value="b"> Dynamic</label>
+            <label><input type="radio" name="q8" value="c"> Empty</label>
+        </div>
+
+        <!-- Q9 -->
+        <div class="quiz-card">
+            <h3>9. Which one is NOT a JavaScript role?</h3>
+            <label><input type="radio" name="q9" value="a"> Interactivity</label>
+            <label><input type="radio" name="q9" value="b"> Styling pages</label>
+            <label><input type="radio" name="q9" value="c"> Handling events</label>
+        </div>
+
+        <!-- Q10 -->
+        <div class="quiz-card">
+            <h3>10. JavaScript is used in ___ websites.</h3>
+            <label><input type="radio" name="q10" value="a"> Modern</label>
+            <label><input type="radio" name="q10" value="b"> Old only</label>
+            <label><input type="radio" name="q10" value="c"> Offline only</label>
+        </div>
+
+        <!-- SUBMIT -->
+        <button class="submit-btn" onclick="submitQuizHandler()">Submit Quiz</button>
+
+    </div>
+
+</div>
+
+<script src="javascript.js"></script>
+
+<script>
+// correct answers (must match values above)
+function submitQuizHandler() {
+    const answers = [
+        "a","b","c","b","b",
+        "a","b","b","b","a"
+    ];
+
+    submitQuiz(answers, 3);
+}
+</script>
+
+</body>
+</html>
