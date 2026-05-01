@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Basics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+// LOCK CHECK (consistent system)
+if (localStorage.getItem("lesson1") !== "done") {
+    alert("Complete Lesson 1 first!");
+    window.location.href = "topics.html";
+}
+
+// mark lesson 2 as started (progress tracking)
+localStorage.setItem("lesson2Progress", "50");
+</script>
+
+<div class="container">
+
+    <h1>CSS Basics</h1>
+
+    <div class="lesson-container">
+
+        <!-- INTRO -->
+        <div class="lesson-card">
+            <p>
+                <b>CSS (Cascading Style Sheets)</b> is used to style and design web pages.
+                It controls how HTML elements look on the screen.
+            </p>
+        </div>
+
+        <!-- WHAT CSS DOES -->
+        <div class="lesson-card">
+            <h3>What CSS Does</h3>
+            <ul>
+                <li>Changes colors</li>
+                <li>Controls layout</li>
+                <li>Adds spacing</li>
+            </ul>
+        </div>
+
+        <!-- EXAMPLE -->
+        <div class="lesson-card">
+            <h3>Example</h3>
+            <pre>
+p {
+    color: blue;
+    font-size: 20px;
+}
+            </pre>
+        </div>
+
+        <!-- WAYS TO USE CSS -->
+        <div class="lesson-card">
+            <h3>Ways to Use CSS</h3>
+            <ul>
+                <li>Inline CSS</li>
+                <li>Internal CSS</li>
+                <li>External CSS (best practice)</li>
+            </ul>
+        </div>
+
+        <!-- SUMMARY + ACTION -->
+        <div class="lesson-card">
+            <p>
+                CSS makes websites visually appealing and improves user experience.
+            </p>
+
+            <a href="quiz2.html">
+                <button>Take Quiz</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
