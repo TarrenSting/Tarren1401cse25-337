@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Koenigsegg — Model Details</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                KOENIGSEGG<span>.</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="models.html">Models</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="technology.html">
+                            Technology
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="records.html">
+                            Records
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1 id="model-name">
+                Koenigsegg Jesko
+            </h1>
+
+            <p id="model-tagline">
+                LightSpeed Performance
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Model Details Section -->
+    <section class="container my-5">
+
+        <div class="row align-items-center g-5">
+
+            <!-- Car Image -->
+            <div class="col-lg-7">
+
+                <img
+                    id="model-img"
+                    src="/images/koenigsegg-emblemb-640x430.jpg"
+                    class="img-fluid rounded-4 shadow"
+                    alt="Koenigsegg Model"
+                >
+
+            </div>
+
+            <!-- Specifications -->
+            <div class="col-lg-5">
+
+                <div class="value-card">
+
+                    <h2 class="mb-4">
+                        Specifications
+                    </h2>
+
+                    <ul
+                        class="list-unstyled fs-5"
+                        id="specs-list"
+                    >
+
+                        <li class="mb-3">
+                            <strong>Engine:</strong>
+                            5.0L Twin-Turbo V8
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Power:</strong>
+                            1600 hp
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Torque:</strong>
+                            1500 Nm
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Transmission:</strong>
+                            LightSpeed 9-speed
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>0–100 km/h:</strong>
+                            2.5 sec
+                        </li>
+
+                        <li class="mb-3">
+                            <strong>Top Speed:</strong>
+                            300+ mph
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary-red mt-3 w-100"
+                    >
+                        Enquire Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container text-center">
+
+            <p class="small">
+                &copy; 2026 Koenigsegg Automotive AB
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic Model Script -->
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const model = params.get('model');
+
+        const models = {
+
+            jesko: {
+                name: 'Jesko',
+                tagline: 'The Absolute Hypercar',
+                img: '/images/koenigsegg-jesko.jpg',
+                specs: [
+                    'Engine: 5.0L Twin-Turbo V8',
+                    'Power: 1600 hp',
+                    'Torque: 1500 Nm',
+                    'Transmission: LightSpeed 9-speed',
+                    '0–100 km/h: 2.5s',
+                    'Top Speed: 300+ mph'
+                ]
+            },
+
+            gemera: {
+                name: 'Gemera',
+                tagline: 'The Mega-GT',
+                img: '/images/koenigsegg-gemera-ii.jpg',
+                specs: [
+                    'Engine: 2.0L 3-cylinder + electric',
+                    'Power: 1700 hp',
+                    'Torque: 3500 Nm',
+                    'Transmission: Direct Drive',
+                    '0–100 km/h: 1.9s',
+                    'Top Speed: 400 km/h'
+                ]
+            },
+
+            regera: {
+                name: 'Regera',
+                tagline: 'Direct Drive Masterpiece',
+                img: '/images/koenigsegg-regera.jpg',
+                specs: [
+                    'Engine: 5.0L V8 Twin-Turbo + YASA motors',
+                    'Power: 1500 hp',
+                    'Torque: 2000 Nm',
+                    'Transmission: KDD No Gearbox',
+                    '0–100 km/h: 2.8s',
+                    'Top Speed: 255 mph'
+                ]
+            },
+
+            cc850: {
+                name: 'CC850',
+                tagline: 'Analog Soul',
+                img: '/images/koenigsegg-cc850-at-pebble-beach-34.jpg',
+                specs: [
+                    'Engine: 5.0L Twin-Turbo V8',
+                    'Power: 1385 hp',
+                    'Torque: 1385 Nm',
+                    'Transmission: 6-speed manual/clutchless',
+                    '0–100 km/h: 2.6s',
+                    'Top Speed: 280 mph'
+                ]
+            }
+
+        };
+
+        if (model && models[model]) {
+
+            let m = models[model];
+
+            document.getElementById('model-name').innerText =
+                `Koenigsegg ${m.name}`;
+
+            document.getElementById('model-tagline').innerText =
+                m.tagline;
+
+            document.getElementById('model-img').src =
+                m.img;
+
+            let ul = document.getElementById('specs-list');
+
+            ul.innerHTML = '';
+
+            m.specs.forEach(spec => {
+
+                let li = document.createElement('li');
+
+                li.classList.add('mb-3');
+
+                li.innerHTML = `<strong>${spec}</strong>`;
+
+                ul.appendChild(li);
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
